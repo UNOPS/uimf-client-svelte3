@@ -1,7 +1,8 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "uimf-svelte3",
-  "homepage": "https://github.com/unops/uimetadataframework",
+  "homepage": "https://github.com/UNOPS/uimf-client-svelte3",
+  "repository": "https://github.com/UNOPS/uimf-client-svelte3",
   "license": "MIT",
   "scripts": {
     "build": "gulp build --minify --prod",
@@ -64,10 +65,9 @@
     "humanize": "0.0.9",
     "natives": "^1.1.6",
     "pikaday": "^1.8.0",
-    "svelte-i18n": "^3.1.0",
-    "uimf-svelte3": "^1.0.0"
+    "svelte-i18n": "^3.1.0"
   },
   "description": "* Resolve\r   * Create `FormInstance`\r   * Initialize `FormInstance` input fields from URL parameters\r * Create Svelte component (`Form`)\r * Initialize Svelte component (`Form`)\r   * If `postOnLoad == true` and all required inputs have values, post the form\r   * Select response handler and handle the response",
   "main": "gulpfile.js",
-  "author": "mtafish14"
+  "author": "unops_pmu"
 }
