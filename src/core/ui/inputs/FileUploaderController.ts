@@ -40,7 +40,7 @@ export class FileUploaderController extends umf.InputController<
 				}
 
 				// Make http request to upload the files.
-				fetch((window as any).uimfapp.getUploadUrl, {
+				fetch((window as any).uimfapp.server.getUploadUrl, {
 					method: "POST",
 					body: formData
 				})
