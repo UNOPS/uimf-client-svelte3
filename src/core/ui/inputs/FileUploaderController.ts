@@ -33,14 +33,14 @@ export class FileUploaderController extends umf.InputController<
 			self.filesIds = [];
 			self.selected = null;
 		} else {
-			const p = new Promise((resolve, reject) => {
+			const p = new Promise<void>((resolve, reject) => {
 				const formData = new FormData();
 				for (const f of files) {
 					formData.append("file", f);
 				}
 
 				// Make http request to upload the files.
-				fetch("/document/UploadDocument", {
+				fetch((window as any).uimfapp.getUploadUrl, {
 					method: "POST",
 					body: formData
 				})
@@ -50,10 +50,10 @@ export class FileUploaderController extends umf.InputController<
 							alert(response.Message);
 							reject(response.Exception);
 						}
-						if (response != null && response.length > 0) {
-							for (const file of response) {
-								result.files.push(file.HashId);
-								self.filesIds.push(file.HashId);
+						if (response.fileIds != null && response.fileIds.length > 0) {
+							for (const file of response.fileIds) {
+								result.files.push(file);
+								self.filesIds.push(file);
 							}
 						}
 						resolve();

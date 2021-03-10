@@ -3,16 +3,18 @@ import { FormMetadata, FormResponse, FormResponseMetadata } from "uimf-core";
 export class UmfServer {
 	private readonly getMetadataUrl: string;
 	private readonly getMenuUrl: string;
+	private readonly getUploadUrl: string;
 	private readonly postFormUrl: string;
 	private eventHandlers: { [id: string]: IEventHandler[] } = {};
 
 	/**
 	 * Creates a new instance of UmfApp.
 	 */
-	constructor(getMetadataUrl: string, postFormUrl: string, getMenuUrl: string) {
+	constructor(getMetadataUrl: string, postFormUrl: string, getMenuUrl: string, getUploadUrl) {
 		this.getMetadataUrl = getMetadataUrl;
 		this.postFormUrl = postFormUrl;
 		this.getMenuUrl = getMenuUrl;
+		this.getUploadUrl = getUploadUrl
 	}
 
 	public on(event: string, handler: IEventHandler): void {
