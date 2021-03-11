@@ -65,7 +65,8 @@
     "humanize": "0.0.9",
     "natives": "^1.1.6",
     "pikaday": "^1.8.0",
-    "svelte-i18n": "^3.1.0"
+    "svelte-i18n": "^3.1.0",
+    "flatpickr": "^4.6.9"
   },
   "description": "* Resolve\r   * Create `FormInstance`\r   * Initialize `FormInstance` input fields from URL parameters\r * Create Svelte component (`Form`)\r * Initialize Svelte component (`Form`)\r   * If `postOnLoad == true` and all required inputs have values, post the form\r   * Select response handler and handle the response",
   "main": "gulpfile.js",
