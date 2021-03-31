@@ -57,7 +57,8 @@ class MyApp extends UmfApp {
 const server = new UmfServer(
 	"/api/form/metadata",
     "/api/form/run",
-    "/api/form/menu");
+    "/api/form/menu",
+	"/document/UploadDocument");
 
 const app = new MyApp(server);
 

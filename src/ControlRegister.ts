@@ -6,10 +6,8 @@ import { DateRangeInputController } from "./core/ui/inputs/DateRangeInputControl
 import { DropdownInputController } from "./core/ui/inputs/DropdownInputController";
 import { EmailInputController } from "./core/ui/inputs/EmailInputController";
 import { FileUploaderController } from "./core/ui/inputs/FileUploaderController";
-//import { HtmlEditorInputController } from "./core/ui/inputs/HtmlEditorInputController";
 import { MultiSelectInputController } from "./core/ui/inputs/MultiSelectInputController";
 import { NumberInputController } from "./core/ui/inputs/NumberInputController";
-import { NumberObjectInputController } from "./core/ui/inputs/NumberObjectInputController";
 import { NumberRangeInputController } from "./core/ui/inputs/NumberRangeInputController";
 import { PaginatorInputController } from "./core/ui/inputs/PaginatorInputController";
 import { PasswordInputController } from "./core/ui/inputs/PasswordInputController";
