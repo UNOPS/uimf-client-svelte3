@@ -27,6 +27,7 @@
 			noResultsText: "No result found",
 			itemSelectText: "",
 			loadingText: "downloading ...",
+			shouldSort: false,
 			maxItemText: (maxItemCount) =>
 				`Cannot add more than ${maxItemCount} item`,
 		});
