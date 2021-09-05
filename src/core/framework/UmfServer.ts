@@ -81,6 +81,7 @@ export class UmfServer {
 		});
 	}
 
+	
 	public postForm(form: string, data: any): Promise<FormResponse> {
 		this.fire("request:started");
 		return fetch(this.postFormUrl, {
@@ -101,8 +102,15 @@ export class UmfServer {
 			})
 			.then((invokeFormResponses: any) => {
 				if (invokeFormResponses.error != null) {
-					this.fire("request:completed", invokeFormResponses.error);
-					return null;
+					if(invokeFormResponses.isNotAuthorized)
+					{
+						window.location.href = "/";
+					}
+					else
+					{
+						this.fire("request:completed", invokeFormResponses.error);
+						return null;
+					}
 				}
 				invokeFormResponses[0].data.metadata =
 					invokeFormResponses[0].data.metadata || new FormResponseMetadata();
