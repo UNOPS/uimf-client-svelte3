@@ -1,5 +1,5 @@
 import * as umf from "../../framework";
-import { DateInputController } from "./DateInputController";
+import { DateTimeInputController } from "./DateTimeInputController";
 
 export class DateRangeInputController extends umf.InputController<DateRange> {
 	public minValueAsText: string = null;
@@ -10,11 +10,11 @@ export class DateRangeInputController extends umf.InputController<DateRange> {
 			this.value = this.parse(value);
 
 			if (this.value != null && this.value.min != null) {
-				this.minValueAsText = DateInputController.serialize(this.value.min);
+				this.minValueAsText = DateTimeInputController.serialize(this.value.min);
 			}
 
 			if (this.value != null && this.value.max != null) {
-				this.maxValueAsText = DateInputController.serialize(this.value.max);
+				this.maxValueAsText = DateTimeInputController.serialize(this.value.max);
 			}
 
 			resolve(this);
@@ -53,13 +53,13 @@ class DateRange {
 
 	public static parse(date: string): DateRange {
 		const split = date.split("|");
-		const minPart = DateInputController.parseDate(split[0]);
-		const maxPart = DateInputController.parseDate(split[1]);
+		const minPart = DateTimeInputController.parseDate(split[0]);
+		const maxPart = DateTimeInputController.parseDate(split[1]);
 
 		return new DateRange(minPart, maxPart);
 	}
 
 	public serialize(): string {
-		return `${DateInputController.serialize(this.min)}|${DateInputController.serialize(this.max)}`;
+		return `${DateTimeInputController.serialize(this.min)}|${DateTimeInputController.serialize(this.max)}`;
 	}
 }

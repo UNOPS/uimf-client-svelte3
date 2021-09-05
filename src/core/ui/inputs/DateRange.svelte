@@ -1,7 +1,7 @@
 <script>
 	import Pikaday from "pikaday";
 	import { onMount } from "svelte";
-	import { DateInputController } from "./DateInputController";
+	import { DateTimeInputController } from "./DateTimeInputController";
 
 	export let id;
 	export let field;
@@ -63,9 +63,9 @@
 				field.value.min = date;
 				field.minValueAsText =
 					date != null
-						? `${date.getFullYear()}-${DateInputController.format2DecimalPlaces(
+						? `${date.getFullYear()}-${DateTimeInputController.format2DecimalPlaces(
 								date.getMonth() + 1
-						  )}-${DateInputController.format2DecimalPlaces(date.getDate())}`
+						  )}-${DateTimeInputController.format2DecimalPlaces(date.getDate())}`
 						: null;
 			},
 		});
@@ -115,9 +115,9 @@
 				field.value.max = date;
 				field.maxValueAsText =
 					date != null
-						? `${date.getFullYear()}-${DateInputController.format2DecimalPlaces(
+						? `${date.getFullYear()}-${DateTimeInputController.format2DecimalPlaces(
 								date.getMonth() + 1
-						  )}-${DateInputController.format2DecimalPlaces(date.getDate())}`
+						  )}-${DateTimeInputController.format2DecimalPlaces(date.getDate())}`
 						: null;
 			},
 		});

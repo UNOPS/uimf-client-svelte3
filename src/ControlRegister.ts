@@ -1,7 +1,7 @@
 import * as umf from "./core/framework";
 
 import { BooleanInputController } from "./core/ui/inputs/BooleanInputController";
-import { DateInputController } from "./core/ui/inputs/DateInputController";
+import { DateTimeInputController } from "./core/ui/inputs/DateTimeInputController";
 import { DateRangeInputController } from "./core/ui/inputs/DateRangeInputController";
 import { DropdownInputController } from "./core/ui/inputs/DropdownInputController";
 import { EmailInputController } from "./core/ui/inputs/EmailInputController";
@@ -15,7 +15,7 @@ import { TextareaInputController } from "./core/ui/inputs/TextareaInputControlle
 import { TypeaheadInputController } from "./core/ui/inputs/TypeaheadInputController";
 
 import BooleanInput from "./core/ui/inputs/Boolean.svelte";
-import DateInput from "./core/ui/inputs/Date.svelte";
+import DateTimeInput from "./core/ui/inputs/DateTime.svelte";
 import DateRangeInput from "./core/ui/inputs/DateRange.svelte";
 import DropdownInput from "./core/ui/inputs/Dropdown.svelte";
 import EmailInput from "./core/ui/inputs/Email.svelte";
@@ -65,7 +65,7 @@ import { Growl, Redirect } from "./core/functions";
 const controlRegister = new umf.ControlRegister();
 controlRegister.registerInputFieldControl("text", TextInput, umf.StringInputController);
 controlRegister.registerInputFieldControl("email", EmailInput, EmailInputController);
-controlRegister.registerInputFieldControl("datetime", DateInput, DateInputController);
+controlRegister.registerInputFieldControl("datetime", DateTimeInput, DateTimeInputController);
 controlRegister.registerInputFieldControl("date-range", DateRangeInput, DateRangeInputController);
 controlRegister.registerInputFieldControl("number", NumberInput, NumberInputController);
 controlRegister.registerInputFieldControl("dropdown", DropdownInput, DropdownInputController);
